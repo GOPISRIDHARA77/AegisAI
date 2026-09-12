@@ -3,6 +3,18 @@ name = "aegisai"
 version = "0.1.0"
 description = "Enterprise Autonomous Intelligence & Operations Platform"
 requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic",
+    "pydantic-settings",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "httpx2",
+]
 
 [build-system]
 requires = ["setuptools>=68"]
