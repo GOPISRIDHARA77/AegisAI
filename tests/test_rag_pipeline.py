@@ -8,3 +8,4 @@ def test_process_documents():
     assert documents[0]["source"] == "company_policy.txt"
     assert len(documents[0]["chunks"]) > 1 
     assert "Working Hours" in documents[0]["chunks"][0]
+    assert len(documents[0]["embeddings"]) == len(documents[0]["chunks"])
